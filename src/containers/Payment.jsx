@@ -7,6 +7,8 @@ import AppContext from '../context/AppContext';
 import { PayPalButton } from 'react-paypal-button';
 //history
 import { useHistory } from 'react-router-dom';
+//handlesumtotal
+import handleSumTotal  from '../utils/handleSumTotal';
 
 const Payment = () => {
 
@@ -27,11 +29,10 @@ const Payment = () => {
     }
 
     const handlePaymentSuccess = (data) => {
-        console.log(data);
         if (data.status === 'COMPLETED') {
             const newOrder = {
                 buyer: buyer,
-                products: cart,
+                product: cart,
                 payment: data
             }
             addNewOrder(newOrder);
@@ -39,11 +40,6 @@ const Payment = () => {
         }
     }
 
-    const handleSumTotal = () => {
-        const reducer = (accumulator, currentValue) => accumulator + currentValue.price;
-        const sum = cart.reduce(reducer, 0);
-        return sum;
-    }
 
     return (
         <div className="payment">
@@ -51,7 +47,7 @@ const Payment = () => {
                 <h3>Resumen del pedido:</h3>
                 {cart.map((item) => (
                     <div className="payment-item" key={item.title}>
-                        <div className="payement-element">
+                        <div className="payment-element">
                             <h4>{item.title}</h4>
                             <span>$ {''} {item.price}</span>
                         </div>
@@ -61,7 +57,7 @@ const Payment = () => {
                     <PayPalButton
                         paypalOptions={paypalOptions}
                         buttonStyles={buttonStyles}
-                        amount={handleSumTotal()}
+                        amount={handleSumTotal(cart)}
                         onPaymentStart={() => console.log('start payment')}
                         onPaymentSuccess={data => handlePaymentSuccess(data)}
                         onPaymentError={error => console.log(error)}
