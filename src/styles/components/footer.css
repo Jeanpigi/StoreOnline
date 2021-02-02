@@ -1,4 +1,11 @@
 .footer {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    justify-content: center;
+    margin-top: 2.5rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.footer-title {
+    margin: auto;
 }

@@ -59,7 +59,9 @@ const Information = () => {
                 </div>
                 <div className="information-buttons">
                     <div className="information-back">
-                        <Link to="/checkout">Regresar</Link>
+                        <button type="button">
+                            <Link to="/checkout">Regresar</Link>
+                        </button>
                     </div>
                     <div className="information-next">
                         <button type="button" onClick={handleSubmit}>Pagar</button>
