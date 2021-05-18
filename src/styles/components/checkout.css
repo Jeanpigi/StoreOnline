@@ -1,7 +1,5 @@
 .checkout {
-  grid-template-columns: 3fr 1fr;
   grid-gap: 2rem;
-  grid-row-gap: 1.5em;
   display: grid;
   padding: 0 0 4em 0;
 }
@@ -50,5 +48,11 @@
     width: 100%;
     display: block;
     outline: none;
+}
+
+@media  screen and (min-width: 768px) {
+  .checkout {
+    grid-template-columns: 3fr 1fr;
+  }
 }
 

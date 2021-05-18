@@ -1,5 +1,5 @@
 import React from 'react';
-//styles
+// styles
 import '../styles/components/footer.css';
 
 const Footer = () => {
@@ -9,6 +9,6 @@ const Footer = () => {
             <p className="footer-copy">Todos los izquierdos reservados</p>
         </div>
     )
-}
+};
 
 export default Footer

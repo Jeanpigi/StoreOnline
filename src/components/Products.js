@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-//components
+// components
 import Product from './Product';
-//styles
+// styles
 import '../styles/components/products.css';
-//appcontext
+// appcontext
 import AppContext from '../context/AppContext';
 
 const Products = () => {

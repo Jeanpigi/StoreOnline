@@ -1,10 +1,11 @@
 import React from 'react';
-//initial state
-import initialState from '../initialState';
-//components
-import Products from '../components/Products';
-//helmet
+// helmet
 import { Helmet } from 'react-helmet';
+// initial state
+import initialState from '../initialState';
+// components
+import Products from '../components/Products';
+
 
 const Home = () => {
     return (

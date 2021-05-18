@@ -1,13 +1,14 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
-//styles
-import '../styles/components/checkout.css';
-//appcontext
-import AppContext from '../context/AppContext';
-//handleSumTotal
-import handleSumTotal from '../utils/handleSumTotal';
-//helmet
+// helmet
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
+// styles
+import '../styles/components/checkout.css';
+// appcontext
+import AppContext from '../context/AppContext';
+// handleSumTotal
+import handleSumTotal from '../utils/handleSumTotal';
+
 
 const Checkout = () => {
     const { state, removeFromCart } = useContext(AppContext);
@@ -32,7 +33,7 @@ const Checkout = () => {
                                 <span>$ {item.price}</span>
                             </div>
                             <button type="button" onClick={handleRemove(item)}>
-                                <i className="fas fa-trash-alt"></i>
+                                <i className="fas fa-trash-alt" />
                             </button>
                         </div>
                     ))}

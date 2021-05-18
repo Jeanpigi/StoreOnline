@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-//styles
+// styles
 import '../styles/components/header.css';
-//appcontext
+// appcontext
 import AppContext from '../context/AppContext';
 
 const Header = () => {
@@ -16,7 +16,7 @@ const Header = () => {
             </h1>
             <div className="header-checkout">
                 <Link to="/checkout">
-                    <i className="fas fa-shopping-basket"></i>
+                    <i className="fas fa-shopping-basket" />
                 </Link>
                 {cart.length > 0 && <div className="header-alert">{cart.length}</div>}
             </div>

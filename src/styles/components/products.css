@@ -1,7 +1,5 @@
 .products-items {
-  grid-template-columns: repeat(3, 1fr);
   grid-gap: 1.5rem;
-  grid-row-gap: 1.5em;
   display: grid;
 }
 .products-item {
@@ -15,7 +13,7 @@
   padding: 10px;
 }
 .products-item-info h2 {
-  font-size: 18px;
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
   font-weight: bold;
   display: flex;
   justify-content: space-between;
@@ -24,7 +22,7 @@
   color: #33b13a;
 }
 .product-item-info p {
-  font-size: 14px;
+  font-size: clamp(1.2rem, 2.5vw, 1.4rem);
   font-weight: 300;
 }
 .product-item img {
@@ -46,4 +44,16 @@
 }
 .product-item button:hover {
   background-color: rgba(39,44,49,0.06);
+}
+
+@media  screen and (min-width: 768px) {
+  .products-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media  screen and (min-width: 1023px) {
+  .products-items {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

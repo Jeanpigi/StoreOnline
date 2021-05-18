@@ -1,6 +1,7 @@
 .header {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 2rem;
 }
 
 .header-checkout {
@@ -12,9 +13,13 @@
     margin: 0 0 0 0.5rem;
 }
 
+.header-checkout i {
+    font-size: 2.3rem;
+}
+
 .header-alert {
     color: #33b13a;
-    font-size: 1.4rem;
+    font-size: clamp(1.2rem, 2.5vw, 1.4rem);
     margin-left: .5rem;
 }
 

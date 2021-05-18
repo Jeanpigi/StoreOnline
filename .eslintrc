@@ -7,6 +7,12 @@
     "prettier"
   ],
   "rules": {
+    "react/jsx-indent": "off",
+    "arrow-body-style": "off",
+    "react/jsx-indent-props": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "no-undefined": "off",
+    "no-undef": "off",
     "react/jsx-filename-extension": [
       1,
       {

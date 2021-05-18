@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import initialState from '../initialState';
-//Axios
 import axios from 'axios';
+import initialState from '../initialState';
+// Axios
 
 const API = 'https://fakestoreapi.com/products';
 

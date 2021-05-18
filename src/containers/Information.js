@@ -1,8 +1,8 @@
 import React, { useRef, useContext } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-//styles
+// styles
 import '../styles/components/information.css';
-//appcontext
+// appcontext
 import AppContext from '../context/AppContext';
 
 const Information = () => {

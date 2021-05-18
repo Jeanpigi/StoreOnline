@@ -1,13 +1,15 @@
 import React, { useContext } from 'react';
-//styles
-import '../styles/components/payment.css';
-//appcontext
-import AppContext from '../context/AppContext';
-//recurso de paypal
-import { PayPalButton } from 'react-paypal-button';
-//history
+// history
 import { useHistory } from 'react-router-dom';
-//handlesumtotal
+// recurso de paypal
+import { PayPalButton } from 'react-paypal-button';
+// styles
+import '../styles/components/payment.css';
+// appcontext
+import AppContext from '../context/AppContext';
+
+
+// handlesumtotal
 import handleSumTotal  from '../utils/handleSumTotal';
 
 const Payment = () => {
@@ -31,7 +33,7 @@ const Payment = () => {
     const handlePaymentSuccess = (data) => {
         if (data.status === 'COMPLETED') {
             const newOrder = {
-                buyer: buyer,
+                buyer,
                 product: cart,
                 payment: data
             }

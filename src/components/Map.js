@@ -1,5 +1,5 @@
 import React from 'react'
-//Google Api
+// Google Api
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 
 const Map = ( {data} ) => {

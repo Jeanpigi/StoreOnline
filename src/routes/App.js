@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-//Containers or components
+// Containers or components
 import Home from '../containers/Home';
 import Checkout from '../containers/Checkout';
 import Information from '../containers/Information';
@@ -8,9 +8,9 @@ import Payment from '../containers/Payment';
 import Success from '../containers/Success';
 import NotFound from '../containers/NotFound';
 import Layout from '../components/Layout';
-//styles
+// styles
 import '../styles/components/app.css';
-//context y hooks
+// context y hooks
 import AppContext from '../context/AppContext';
 import useInitialState from '../hooks/useInitialState';
 
